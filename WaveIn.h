@@ -19,7 +19,7 @@
 
 #include <memory>
 
-namespace PitchDet {
+namespace App {
 
 template<typename T>
 class WaveIn {
