@@ -61,8 +61,7 @@ private:
 template<typename T = int16_t>
 class WaveInCO : public WaveIn<T> {
 public:
-    using BufferCont = typename WaveIn<T>::BufferCont;
-    using CallableObjType = std::function<void(BufferCont const &)>;
+    using CallableObjType = std::function<void(typename WaveIn<T>::BufferCont const &)>;
 
     WaveInCO( int Device, size_t Channels, size_t SampleCount, uint32_t SamplesPerSec,
               CallableObjType Callback )
@@ -71,7 +70,7 @@ public:
     {
     }
 protected:
-    virtual void DoCallback( BufferCont const & WaveData ) override {
+    virtual void DoCallback( typename WaveIn<T>::BufferCont const & WaveData ) override {
         callback_( WaveData );
     }
 private:
