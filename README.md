@@ -31,10 +31,13 @@ WaveInType Wi(
   44100,   // Sample rate (CD)
   []( auto& Buffer ) {
     // Buffer contains the samples to process
-    // In this example, Buffer is a std::vector<int16_t> 
-    // Be careful, because this code runs in the context 
-    // of a separate thread from the one that created 
-    // the WaveInCO object.
+    // In this example, Buffer is a
+    // 
+    //    std::vector<int16_t> const &
+    // 
+    // Note: this code runs in the context 
+    // of a separate thread from the one that
+    // created the WaveInCO object.
   }
 );
 
