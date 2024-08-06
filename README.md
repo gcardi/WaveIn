@@ -24,7 +24,7 @@ Then, lets define an instance passing some parameters (device, input channel cou
 
 ```cpp
 // Declare an instance
-WaveInCO  Wi( 
+WaveInType  Wi( 
   0,      // Input device number 
   2,      // Stereo channels (2 channels)
   1024,   // 1 KiB buffer lenght
